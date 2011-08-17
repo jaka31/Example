@@ -86,5 +86,5 @@ echo "</div>";
 
 
 </body>
-<footer><p>To je v nogi.</p></footer>
+<footer><p>To je v nogi in je lepo.</p></footer>
 </html>
