@@ -44,6 +44,7 @@ function getMessage() {
 }
 $ime=$_POST['ime'];
 $priimek=$_POST['priimek'];
+$email=$_POST['email'];
 $date=time();
 
 
@@ -60,7 +61,7 @@ $db = $a->baza;
 //izberi zbirko
 $collection = $db->ljudje;
 //dodaj zapis
-$obj = array("datum" => $date, "name" => $ime, "priimek" => $priimek, "cas" => date('d.m.y \o\b H:i:s'));
+$obj = array("datum" => $date, "name" => $ime, "priimek" => $priimek,"email" => $email, "cas" => date('d.m.y \o\b H:i:s'));
 $collection->insert($obj);
 }
 
@@ -77,7 +78,7 @@ echo "<br>Zadnji trije vpisi v bazo so: <br><br>";
 $trije->limit(3)->sort(array('datum'=>-1));
 
 foreach ($trije as $obj) {
-	echo '<div id="vnos">Ime: ' . "<b>".$obj['name'] . "</b><br>Priimek: <b>".  $obj['priimek']. '</b><br>Vnos je bil potrjen ' . '<b>' . $obj['cas'] . '</b><br></div>';
+	echo '<div id="vnos">Ime: ' . "<b>".$obj['name'] . "</b><br>Priimek: <b>".  $obj['priimek']. '</b><br>Email: ' . '<i>' . $obj['email']. '</i>' . '<br>Vnos je bil potrjen ' . '<b>' . $obj['cas'] . '</b><br></div>';
 }
 echo "</div>";
 
