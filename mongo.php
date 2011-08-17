@@ -14,7 +14,7 @@
 	margin-bottom:10px;
 	margin-left:20px;
 	margin-top:10px;
-	width:200px;
+	width:250px;
 }
 
 
@@ -44,7 +44,7 @@ function getMessage() {
 }
 $ime=$_POST['ime'];
 $priimek=$_POST['priimek'];
-$email=$_POST['email'];
+$email=$_POST['mail'];
 $date=time();
 
 
