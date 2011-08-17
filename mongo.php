@@ -33,7 +33,6 @@
 Ime:<input type="text" name="ime" autofocus required /><br />
 Priimek:<input type="text" name="priimek" autofocus required /><br />
 Email: <input type="email" name="mail" /><br /><br />
-Najljubša cifra: <input type="number" min="0" max="9" />
 <input type="submit" value="Pošlji" /><br />
 </form>
 </div>
